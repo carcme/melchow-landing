@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --melchow_primary: #5e2750;
+  --melchow_hover: #804972;
+}

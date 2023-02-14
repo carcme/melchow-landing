@@ -1,0 +1,29 @@
+[
+  {
+    "__comments": "These are some comments",
+    "title": "Melchow 3B",
+    "description": "Our Bakery, Bed & Breakfast and Brewery on the Outskirts of Berlin",
+    "text": " Welcome to our Melchow website. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium",
+    "subtitle": "Which site do you want?",
+    "home_items": [
+      {
+        "name": "Back",
+        "image": "images/wilde.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium in. ",
+        "link": "/wilde"
+      },
+      {
+        "name": "Bett",
+        "image": "images/bett.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium in. ",
+        "link": "/bett"
+      },
+      {
+        "name": "Brau",
+        "image": "images/brau.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium in. ",
+        "link": "https://melchow-brau.netlify.app"
+      }
+    ]
+  }
+]

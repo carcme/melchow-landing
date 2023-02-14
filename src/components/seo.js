@@ -17,6 +17,7 @@ function Seo({ description, title, children }) {
             title
             description
             author
+            language
           }
         }
       }
@@ -33,6 +34,12 @@ function Seo({ description, title, children }) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content={site.siteMetadata.image || ``} />
+      <meta property="og:url" content={site.siteMetadata.siteUrl || ``} />
+      <meta
+        name="keywords"
+        content="Bäckerei Bett und Brauerei, Melchow, Berlin"
+      />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
