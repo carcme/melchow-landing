@@ -26,14 +26,16 @@ const Navbar = ({ siteTitle }) => {
           >
             Home
           </Link>
-          <Link
-            to="/wilde"
+          <a
+            href="https://melchow-bakery.netlify.app/"
             className="nav-link"
+            target="_blank"
+            rel="noreferrer"
             activeClassName="active-link"
             onClick={() => setShow(false)}
           >
             Bäckerei
-          </Link>
+          </a>
           <Link
             to="/bett"
             className="nav-link"

@@ -10,7 +10,7 @@
         "name": "Back",
         "image": "images/wilde.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium in. ",
-        "link": "/wilde"
+        "link": "https://melchow-bakery.netlify.app"
       },
       {
         "name": "Bett",
