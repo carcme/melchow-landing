@@ -21,39 +21,47 @@ body {
   text-align: center;
 }
 
-.navbar {
+.navbar-landing {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.nav-center {
+.nav-center-landing {
   width: 90vw;
   max-width: 1200px;
 }
-.nav-header {
+.nav-header-landing {
   height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav-btn {
+.home-logo-landing {
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav-btn-landing {
   padding: 0.5rem 0.5rem;
   color: #2b2b2b;
   border-radius: 10%;
   background: #00000020;
 }
-.nav-links {
+.nav-links-landing {
   height: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: height 0.3s;
 }
-.show-links {
+.show-links-landing {
   height: 18rem;
   /* transition: height 0.3s; */
 }
-.nav-link {
+.nav-link-landing {
   display: block;
   text-align: center;
   font-size: 1.5rem;
@@ -63,74 +71,69 @@ body {
   padding: 1rem 0;
   border-top: 1px solid #cbd3e1;
   transition: 0.3s ease-in-out all;
+  border-bottom: 1px solid transparent;
 }
-.nav-header img {
+.nav-header-landing img {
   width: 60px;
   height: 60px;
 }
 @media screen and (min-width: 730px) {
-  .navbar {
+  .navbar-landing {
     height: 6rem;
   }
-  .nav-center {
+  .nav-center-landing {
     display: flex;
     align-items: center;
   }
-  .nav-header {
+  .nav-header-landing {
     padding: 0;
-    margin-inline: 2rem;
     height: auto;
   }
-  .nav-header img {
-    width: 80px;
-    height: 80px;
-    margin-top: 15px;
-    margin-left: 18px;
-    border-radius: 15px;
-  }
-  .nav-btn {
+
+  .nav-btn-landing {
     display: none;
   }
-  .nav-links {
-    height: auto !important;
+  .nav-links-landing {
+    height: auto;
     flex-direction: row;
-    justify-content: end;
+    justify-content: end !important;
     align-items: center;
     width: 100%;
   }
-  .nav-link {
+  .nav-link-landing {
     padding: 0;
     border-top: none;
     margin-right: 1rem;
     font-size: 1rem;
-    margin-right: 2rem;
     color: #70747c;
+    border-bottom: 1px solid transparent;
   }
 }
-.active-link {
+.active-link-landing {
   color: var(--melchow_primary);
   font-weight: bold;
   border-bottom: none !important;
 }
-.nav-link:hover {
+.nav-link-landing:hover {
   color: var(--melchow_hover);
   border-bottom: 1px solid #2b2b2b;
 }
-.footer {
+.footer-landing {
   display: flexbox;
   width: 100%;
   margin-top: 80px;
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: #2b2b2b;
+  text-align: center;
 }
-.footer-text {
+.footer-text-landing {
   font-weight: 700;
   color: #888;
   text-decoration: none;
   margin-right: 4%;
 }
-.title {
+.title-landing {
   margin-top: 30px;
   text-align: center;
   font-size: calc(50px + 1vw);
@@ -146,7 +149,7 @@ body {
   text-underline-offset: 3px;
 }
 
-.description {
+.description-landing {
   padding-left: 4%;
   padding-right: 4%;
   margin: auto;
@@ -158,7 +161,7 @@ body {
   color: #00000090;
   font-weight: 300;
 }
-.text {
+.text-landing {
   padding-left: 4%;
   padding-right: 4%;
   margin: auto;
@@ -170,7 +173,7 @@ body {
   font-weight: 300;
 }
 
-.subtitle {
+.subtitle-landing {
   margin: auto;
   max-width: 700px;
   text-align: center;
@@ -178,22 +181,18 @@ body {
   font-weight: 300;
 }
 
-.home-main,
-footer {
+.home-main-landing {
   text-align: center;
 }
-.home-logo {
-  margin-top: 50px;
-  width: 300px;
-}
-.divider {
+
+.divider-landing {
   margin: 50px auto 50px auto;
   height: 1px;
   background-color: #88888890;
   max-width: 700px;
 }
 
-.home-grid-container {
+.home-grid-container-landing {
   padding-left: 2%;
   padding-right: 2%;
   margin-bottom: 100px;
@@ -207,7 +206,7 @@ footer {
   font-weight: 600;
   font-size: calc(8px + 1vw);
 }
-.home-grid-item {
+.home-grid-item-landing {
   min-height: 200px;
   margin: 4%;
   background-color: #ffffff;
@@ -216,18 +215,18 @@ footer {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.home-grid-item:hover {
+.home-grid-item-landing:hover {
   transform: scale(1.05);
   border: 2px solid #fff;
 }
 
 @media (max-width: 730px) {
-  .home-grid-container {
+  .home-grid-container-landing {
     max-width: 330px;
     grid-template-columns: 100%;
   }
 
-  .home-grid-item {
+  .home-grid-item-landing {
     min-height: 280px;
     max-width: 300px;
   }
@@ -236,3 +235,7 @@ footer {
 /*======================
     404 page
 =======================*/
+.error-page-landing {
+  min-height: calc(100vh - (6rem));
+  text-align: center;
+}

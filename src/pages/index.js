@@ -1,7 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Seo from "../components/Seo"
 
 const IndexPage = () => {
   const data = useStaticQuery(query)
@@ -12,29 +12,29 @@ const IndexPage = () => {
   let i = 0
   home_items.forEach(item => {
     homeItems.push(
-      <a href={item.link} target="_blank" rel="noreferrer">
+      <Link to={item.link}>
         <div
           key={i}
-          className="home-grid-item"
+          className="home-grid-item-landing"
           style={{
             backgroundImage: `url(${item.image})`,
             backgroundSize: "100%",
           }}
         ></div>
-      </a>
+      </Link>
     )
     i++
   })
 
   return (
     <Layout>
-      <h1 className="title">{title}</h1>
-      <div className="home-main">
-        <div className="description">{description}</div>
-        <p className="text">{text}</p>
-        <div className="divider"></div>
-        <h2 className="subtitle">{subtitle}</h2>
-        <div className="home-grid-container">{homeItems}</div>{" "}
+      <h1 className="title-landing">{title}</h1>
+      <div className="home-main-landing">
+        <div className="description-landing">{description}</div>
+        <p className="text-landing">{text}</p>
+        <div className="divider-landing"></div>
+        <h2 className="subtitle-landing">{subtitle}</h2>
+        <div className="home-grid-container-landing">{homeItems}</div>{" "}
       </div>
     </Layout>
   )

@@ -1,16 +1,17 @@
 import * as React from "react"
 
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Seo from "../components/Seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <div className="divider"></div>
-    <h1 className="title">Yeah, that's not right</h1>
-    <div className="text">
-      This is a little embrassing... you found the 404 page
-    </div>
-    <div className="divider"></div>
+    <Seo title="404" description="" />
+    <main className="error-page">
+      <div className="divider"></div>
+      <h1 className="title">404 Not Found</h1>
+      <div className="text">Well, this is a little embrassing...</div>
+      <div className="divider"></div>
+    </main>
   </Layout>
 )
 

@@ -1,18 +1,70 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+const path = require(`path`)
+const slugify = require("slugify")
 
-/**
- * @type {import('gatsby').GatsbyNode['createPages']}
- */
-exports.createPages = async ({ actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
+
+  const result = await graphql(`
+    query GetTags {
+      allContentfulEntry {
+        nodes {
+          ... on ContentfulBed {
+            content {
+              tags
+            }
+          }
+          ... on ContentfulBakery {
+            content {
+              tags
+            }
+          }
+          ... on ContentfulRecipe {
+            content {
+              tags
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  result.data.allContentfulEntry.nodes.forEach(item => {
+    console.log(item?.content?.tags)
+
+    item?.content?.tags?.forEach(tag => {
+      const tagSlug = slugify(tag, { lower: true })
+      createPage({
+        path: `/tags/${tagSlug}`,
+        component: path.resolve(`src/templates/tag-template.jsx`),
+        context: {
+          tag: tag,
+        },
+      })
+    })
   })
 }
+// ----------------------
+
+// const result = await graphql(`
+//   query GetAllTags {
+//   allContentfulEntry {
+//     nodes {
+//       ... on ContentfulRecipe {
+//         content {
+//           tags
+//         }
+//       }
+//       ... on ContentfulBed {
+//         content {
+//           tags
+//         }
+//       }
+//       ... on ContentfulBakery {
+//         content {
+//           tags
+//         }
+//       }
+//     }
+//   }
+// }
+// `)

@@ -7,9 +7,14 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `3b | Melchow : Bett, Bäckerei und Brauerei`,
+    title: `3b Melchow`,
     description: `Alles Bett, Bäckerei und Brauerei in Melchow`,
     language: "de",
     keywords: "back",
@@ -23,8 +28,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `bed_images`,
+        path: `${__dirname}/src/assets/images/bed/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `bakery_images`,
+        path: `${__dirname}/src/assets/images/bakery/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `brewery_images`,
+        path: `${__dirname}/src/assets/images/brewery/`,
       },
     },
     `gatsby-transformer-json`,
@@ -52,5 +71,13 @@ module.exports = {
       },
     },
     "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `d2miw24ee2ig`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }

@@ -1,59 +1,60 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { FiAlignJustify } from "react-icons/fi"
-import logo from "../images/image.png"
+// import logo from "../images/logo.png"
 
 const Navbar = ({ siteTitle }) => {
   const [show, setShow] = useState(false)
 
   return (
-    <nav className="navbar">
-      <div className="nav-center">
-        <div className="nav-header">
+    <nav className="navbar-landing">
+      <div className="nav-center-landing">
+        <div className="nav-header-landing">
           <Link to="/">
-            <img className="logo" src={logo} alt="Melchow Landing page logo" />
+            <div className="home-logo-landing">Melchow 3B </div>
+            {/* <img className="logo" src={logo} alt="Melchow Landing page logo" /> */}
           </Link>
-          <button className="nav-btn" onClick={() => setShow(!show)}>
-            <FiAlignJustify size={30} />
+          <button className="nav-btn-landing" onClick={() => setShow(!show)}>
+            <FiAlignJustify size={25} />
           </button>
         </div>
-        <div className={show ? "nav-links show-links" : "nav-links"}>
+        <div
+          className={
+            show ? "nav-links-landing show-links-landing" : "nav-links-landing"
+          }
+        >
           <Link
             to="/"
-            className="nav-link"
-            activeClassName="active-link"
+            className="nav-link-landing"
+            activeClassName="active-link-landing"
             onClick={() => setShow(false)}
           >
             Home
           </Link>
-          <a
-            href="https://melchow-bakery.netlify.app/"
-            className="nav-link"
-            target="_blank"
-            rel="noreferrer"
-            activeClassName="active-link"
+          <Link
+            to="/bake/"
+            className="nav-link-landing"
+            activeClassName="active-link-landing"
             onClick={() => setShow(false)}
           >
             Bäckerei
-          </a>
+          </Link>
           <Link
-            to="/bett"
-            className="nav-link"
-            activeClassName="active-link"
+            to="/bed/bed"
+            className="nav-link-landing"
+            activeClassName="active-link-landing"
             onClick={() => setShow(false)}
           >
             Bed & Breakfast
           </Link>
-          <a
-            href="https://melchow-brau.netlify.app"
-            className="nav-link"
-            target="_blank"
-            rel="noreferrer"
-            activeClassName="active-link"
+          <Link
+            to="/brew/"
+            className="nav-link-landing"
+            activeClassName="active-link-landing"
             onClick={() => setShow(false)}
           >
             Brauerei
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

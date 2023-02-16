@@ -10,19 +10,19 @@
         "name": "Back",
         "image": "images/wilde.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium in. ",
-        "link": "https://melchow-bakery.netlify.app"
+        "link": "/bake/"
       },
       {
         "name": "Bett",
         "image": "images/bett.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium in. ",
-        "link": "/bett"
+        "link": "/bed/bed"
       },
       {
         "name": "Brau",
         "image": "images/brau.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis eros imperdiet nibh tempor luctus. Maecenas efficitur augue nunc, ac suscipit nisl pretium in. ",
-        "link": "https://melchow-brau.netlify.app"
+        "link": "/brew/"
       }
     ]
   }
