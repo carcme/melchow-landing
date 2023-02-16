@@ -1,5 +1,5 @@
 import React from "react"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Layout from "../../components/brew/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"

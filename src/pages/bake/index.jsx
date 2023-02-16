@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../../components/bake/Layout"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllCakes from "../../components/bake/AllCakes"
 import Seo from "../../components/Seo"

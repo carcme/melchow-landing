@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Layout from "../../components/bed/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from "../../components/Seo"

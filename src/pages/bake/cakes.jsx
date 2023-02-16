@@ -1,6 +1,6 @@
 import React from "react"
 import AllCakes from "../../components/bake/AllCakes"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Layout from "../../components/bake/Layout"
 import Seo from "../../components/Seo"
 

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Layout from "../../components/brew/Layout"
 import AllRecipes from "../../components/brew/AllRecipes"
 import Seo from "../../components/Seo"

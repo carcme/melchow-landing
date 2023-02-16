@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/bake/Layout"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Seo from "../../components/Seo"
 import { Link, graphql } from "gatsby"
 import setupTags from "../../utils/setupTags"

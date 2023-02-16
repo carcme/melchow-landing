@@ -1,5 +1,5 @@
 import React from "react"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Layout from "../../components/bed/Layout"
 import Seo from "../../components/seo"
 import { StaticImage } from "gatsby-plugin-image"

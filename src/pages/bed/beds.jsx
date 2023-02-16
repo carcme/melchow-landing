@@ -1,6 +1,6 @@
 import React from "react"
 import AllBeds from "../../components/bed/AllBeds"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Layout from "../../components/bed/Layout"
 import Seo from "../../components/Seo"
 

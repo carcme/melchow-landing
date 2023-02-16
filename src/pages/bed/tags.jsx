@@ -1,5 +1,5 @@
 import React from "react"
-import LayoutPrime from "../../components/Layout"
+import LayoutPrime from "../../components/layout"
 import Layout from "../../components/bed/Layout"
 import { Link, graphql } from "gatsby"
 import setupTags from "../../utils/setupTags"
