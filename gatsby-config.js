@@ -14,17 +14,28 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `3b Melchow`,
-    description: `Alles Bett, Bäckerei und Brauerei in Melchow`,
+    title: `Melchow 3b`,
+    description: `Alles Bett, Bäckerei und Brauerei in Melchow sadsa`,
     language: "de",
-    keywords: "back",
-    image: "/logo.png",
-    twitter: "melchow3b",
+    keywords:
+      "bakery, brewery, bed and breakfast, nature retreat, self catering",
+    image:
+      "https://images.ctfassets.net/d2miw24ee2ig/Anqu1WjyoNBrL4fsQIOOh/47a84639be4343a6775b5dfdd161cc96/chocolate-whisky-balls.jpg",
+    telephoneNumber: "+49 123 456 789",
+    emailContact: "fwillemsen@magix.net",
+    twitterUsername: "melchow3b",
+    facebookUsername: "jules.cunningham.3",
+    instagramUsername: "cookie_cunningham",
+    linkedinUsername: "",
+    twitterCardImageUrl:
+      "https://images.ctfassets.net/d2miw24ee2ig/Anqu1WjyoNBrL4fsQIOOh/47a84639be4343a6775b5dfdd161cc96/chocolate-whisky-balls.jpg",
     author: `@hammer3`,
-    siteUrl: `https://todo.io/`,
+    siteUrl: `https://melchow-3b.netlify.app/`,
+    siteName: ``,
+    developerName: `hammer3`,
+    developerUrl: `https://hammer3.de`,
   },
   plugins: [
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,15 +57,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images/brewery/`,
       },
     },
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data/`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -70,7 +84,6 @@ module.exports = {
         icon: `src/images/image.png`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-source-contentful`,
       options: {

@@ -12,7 +12,7 @@ const Tags = ({ data }) => {
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="Tags" description="" />
+        <Seo title="Tags | B&B" description="" />
         <main className="page">
           <section className="tags-page">
             {newTags.map((tag, index) => {

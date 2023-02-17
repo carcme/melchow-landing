@@ -12,7 +12,7 @@ const Tags = ({ data }) => {
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="Tags" description="" />
+        <Seo title="Tags | Brauerei" description="" />
         <main className="page">
           <section className="tags-page">
             {newTags.map((tag, index) => {
@@ -21,7 +21,7 @@ const Tags = ({ data }) => {
               return (
                 <Link to={`/tags/${slug}`} key={index} className="tag">
                   <h5>{text}</h5>
-                  <p>{value} recipe</p>
+                  <p>{value > 1 ? `${value} Tags` : `${value} Tag`}</p>
                 </Link>
               )
             })}

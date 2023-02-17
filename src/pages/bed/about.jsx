@@ -14,7 +14,7 @@ const About = ({
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="About" description="About page for Melchow Brau" />
+        <Seo title="About | B&B" description="" />
         <main className="page">
           <section className="about-page">
             <article>

@@ -2,7 +2,9 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPercent } from "react-icons/bs"
-import { SiHomebrew } from "react-icons/si"
+import { FaEuroSign } from "react-icons/fa"
+import { AiOutlinePieChart } from "react-icons/ai"
+
 import Layout from "../components/bake/Layout"
 import LayoutPrime from "../components/layout"
 import slugify from "slugify"
@@ -10,6 +12,7 @@ import Seo from "../components/Seo"
 import CapitaliseLetter from "../utils/CapitaliseLetter"
 
 const BakeryTemplate = ({ data }) => {
+  console.log(data)
   const {
     title,
     cookTime,
@@ -20,6 +23,7 @@ const BakeryTemplate = ({ data }) => {
     image,
   } = data.contentfulBakery
 
+  console.log("servings:" + servings)
   const pathToImage = getImage(image)
   const { tags, instructions, ingredients, tools } = content
 
@@ -42,24 +46,28 @@ const BakeryTemplate = ({ data }) => {
                 {/* icons */}
                 <div className="cake-icons">
                   <article>
-                    <BsPercent />
+                    <FaEuroSign />
                     <h5>ABV</h5>
-                    <p>{prepTime} %</p>
+                    <p>{prepTime && prepTime > 0 ? prepTime + `` : `---`} </p>
                   </article>
                   <article>
-                    <SiHomebrew />
+                    <AiOutlinePieChart />
                     <h5>serving</h5>
-                    <p>{servings} </p>
+                    <p>{servings && servings > 0 ? servings : `---`} </p>
                   </article>
                   <article>
                     <BsClockHistory />
                     <h5>cook time</h5>
-                    <p>{cookTime} min.</p>
+                    <p>
+                      {cookTime && cookTime > 0 ? cookTime + `mins.` : `---`}{" "}
+                    </p>
                   </article>
                   <article>
                     <BsClock />
                     <h5>prep time</h5>
-                    <p>{prepTime} mins.</p>
+                    <p>
+                      {prepTime && prepTime > 0 ? prepTime + ` mins.` : `---`}{" "}
+                    </p>
                   </article>
                 </div>
                 {/* tags */}
@@ -127,6 +135,9 @@ export const query = graphql`
   query ($title: String) {
     contentfulBakery(title: { eq: $title }) {
       title
+      cookTime
+      prepTime
+      servings
       content {
         ingredients
         instructions
@@ -136,7 +147,6 @@ export const query = graphql`
       description {
         description
       }
-      servings
       image {
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
       }

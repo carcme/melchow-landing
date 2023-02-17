@@ -8,7 +8,7 @@ const Beds = () => {
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="Beds" description="" />
+        <Seo title="Beds | B&B" description="" />
         <main className="page">
           <AllBeds />
         </main>

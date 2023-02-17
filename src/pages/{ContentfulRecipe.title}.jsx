@@ -44,22 +44,26 @@ const RecipeTemplate = ({ data }) => {
                   <article>
                     <BsPercent />
                     <h5>ABV</h5>
-                    <p>{prepTime} %</p>
+                    <p>{prepTime && prepTime > 0 ? prepTime + `%` : `---`} </p>
                   </article>
                   <article>
                     <SiHomebrew />
                     <h5>serving</h5>
-                    <p>{servings} </p>
+                    <p>{servings && servings > 0 ? servings : `---`} </p>
                   </article>
                   <article>
                     <BsClockHistory />
                     <h5>cook time</h5>
-                    <p>{cookTime} min.</p>
+                    <p>
+                      {cookTime && cookTime > 0 ? cookTime + `mins.` : `---`}{" "}
+                    </p>
                   </article>
                   <article>
                     <BsClock />
                     <h5>prep time</h5>
-                    <p>{prepTime} mins.</p>
+                    <p>
+                      {prepTime && prepTime > 0 ? prepTime + ` mins.` : `---`}{" "}
+                    </p>
                   </article>
                 </div>
                 {/* tags */}
@@ -128,6 +132,8 @@ export const query = graphql`
     contentfulRecipe(title: { eq: $title }) {
       title
       cookTime
+      prepTime
+      servings
       content {
         ingredients
         instructions
@@ -137,8 +143,6 @@ export const query = graphql`
       description {
         description
       }
-      prepTime
-      servings
       image {
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
       }

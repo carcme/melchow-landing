@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="Home" description="Homepage for Melchow Brau" />
+        <Seo title="Brauerei" description="" />
         <main className="page">
           <header className="hero">
             <StaticImage

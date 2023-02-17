@@ -16,7 +16,8 @@ const BedsList = ({ beds = [] }) => {
             <GatsbyImage image={pathToImage} className="cake-img" alt={title} />
             <h5>{title}</h5>
             <p>
-              ABV: {prepTime} % | Cook time: {cookTime}mins{" "}
+              {prepTime && prepTime > 0 ? `Sleeps: ${prepTime}` : ``}
+              {/* Sleeps: {prepTime} | Cook time: {cookTime}mins{" "} */}
             </p>
           </Link>
         )

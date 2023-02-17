@@ -9,7 +9,7 @@ const Bed = () => {
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="B&B" description="Homepage for Melchow Bed and Breakfast" />
+        <Seo title="B&B" description="" />
         <main className="page">
           <header className="hero">
             <StaticImage

@@ -29,7 +29,7 @@ const Gallery = () => {
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="Gallery" description="" />
+        <Seo title="Gallery | Brauerei" description="" />
         <div className="page cakes-list">
           {nodes.map((image, index) => {
             const { name } = image

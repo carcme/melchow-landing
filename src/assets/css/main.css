@@ -62,7 +62,7 @@
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
-  --backgroundColor: var(--grey-200);
+  --backgroundColor: var(--grey-0);
   --textColor: var(--grey-900);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
@@ -453,27 +453,6 @@ form > *:last-child {
 /*#########*/
 /* Footer */
 /*#########*/
-.page-footer {
-  text-align: center;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--black);
-  color: var(--white);
-}
-.page-footer h5 {
-  margin-bottom: 0;
-}
-.page-footer p {
-  margin-bottom: 0;
-}
-.page-footer span {
-  color: var(--grey-600);
-}
-.page-footer a {
-  color: var(--white);
-}
 
 /*#########*/
 /* Error */
@@ -747,6 +726,7 @@ form > *:last-child {
 }
 .cake-icons svg {
   font-size: 1.5rem;
+  margin: auto;
 }
 .cake-icons h5,
 .cake-icons p {

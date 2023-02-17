@@ -12,6 +12,7 @@ const query = graphql`
         featured
         cookTime
         servings
+        prepTime
         description {
           description
         }

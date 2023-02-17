@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./Navbar"
-import Footer from "./footer"
+import Footer from "./Footer/Footer"
 
 import "normalize.css"
 import "./layout.css"

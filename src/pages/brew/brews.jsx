@@ -8,7 +8,7 @@ const Brews = () => {
   return (
     <LayoutPrime>
       <Layout>
-        <Seo title="Brews" description="" />
+        <Seo title="Brews | Brauerei" description="" />
         <main className="page">
           <AllRecipes />
         </main>

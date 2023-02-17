@@ -5,4 +5,13 @@
 :root {
   --melchow_primary: #5e2750;
   --melchow_hover: #804972;
+  --melchow_gold: #ffc22a;
+
+  --melchow_hover: #804972;
+  --borderSpacing: 30px;
+  --gap: 40px;
+}
+
+@media (min-width: 730px) {
+  --borderSpacing: 50px;
 }

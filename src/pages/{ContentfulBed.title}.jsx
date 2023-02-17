@@ -1,8 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { BsClockHistory, BsClock, BsPercent } from "react-icons/bs"
-import { SiHomebrew } from "react-icons/si"
+import { MdKitchen } from "react-icons/md"
+import { FaWifi, FaBed, FaShower, FaThumbsUp } from "react-icons/fa"
+import { TiTick } from "react-icons/ti"
+import { IoMdCloseCircle } from "react-icons/io"
+
 import Layout from "../components/bed/Layout"
 import LayoutPrime from "../components/layout"
 import slugify from "slugify"
@@ -22,7 +25,7 @@ const BedTemplate = ({ data }) => {
 
   const pathToImage = getImage(image)
   const { tags, instructions, ingredients, tools } = content
-
+  console.log("cookTime " + cookTime)
   return (
     <LayoutPrime>
       <Layout>
@@ -42,24 +45,37 @@ const BedTemplate = ({ data }) => {
                 {/* icons */}
                 <div className="cake-icons">
                   <article>
-                    <BsPercent />
-                    <h5>ABV</h5>
-                    <p>{prepTime} %</p>
+                    <FaBed />
+                    <h5>Sleeps</h5>
+                    <p>{prepTime && prepTime > 0 ? prepTime : `---`} </p>
                   </article>
                   <article>
-                    <SiHomebrew />
-                    <h5>serving</h5>
-                    <p>{servings} </p>
+                    <FaShower />
+                    <h5>On-Suite</h5>
+                    {/* <p>{servings && servings > 0 ? servings : `---`} </p> */}
+                    {servings && (
+                      <TiTick size={20} style={{ color: "green" }} />
+                    )}
+                    {servings === null && (
+                      <IoMdCloseCircle size={20} style={{ color: "#B22222" }} />
+                    )}
                   </article>
                   <article>
-                    <BsClockHistory />
-                    <h5>cook time</h5>
-                    <p>{cookTime} min.</p>
+                    <MdKitchen />
+                    <h5>kitchen</h5>
+                    {/* <p>{cookTime && cookTime > 0 ? cookTime : `---`} </p> */}
+                    {cookTime && (
+                      <TiTick size={20} style={{ color: "green" }} />
+                    )}
+                    {cookTime === null && (
+                      <IoMdCloseCircle size={20} style={{ color: "#B22222" }} />
+                    )}
                   </article>
                   <article>
-                    <BsClock />
-                    <h5>prep time</h5>
-                    <p>{prepTime} mins.</p>
+                    <FaWifi />
+                    <h5>WiFi</h5>
+                    {/* <p>{prepTime && prepTime > 0 ? prepTime : `---`} </p> */}
+                    <TiTick size={20} style={{ color: "green" }} />
                   </article>
                 </div>
                 {/* tags */}
@@ -136,6 +152,8 @@ export const query = graphql`
       description {
         description
       }
+      prepTime
+      cookTime
       servings
       image {
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
